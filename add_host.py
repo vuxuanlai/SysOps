@@ -16,7 +16,7 @@ if __name__ == '__main__':
     command1 = "cat /etc/hosts | grep " + hostname + " | awk \'{print $1}\'"
     host_ip = os.popen(command1).readline().strip()
     hostname = 'test_' + hostname[:3][1:] + '_' + hostname[4:]
-    variables = file_to_list("host_template.conf")
+    variables = file_to_list("add_host_template.conf")
     variables = filter(None, variables)
     variables_dict = {}
     for item in variables:
